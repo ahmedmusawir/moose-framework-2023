@@ -1,2 +1,2 @@
-# moose-framework-2023
-Moose framework updated for Latest Node.js v18.15.0 ... replaced node-sass/gulp-sass with gulp-dart-sass
+# moose-framework-2022
+Rebuilding the framework ... work ongoing ... React + Gulp + SCSS + WP + Composer + ACF Pro etc. This was mainly revived for the House for Purchase project cuz IDX doesn't work with Thrive Themes which makes me happy ... :-)
