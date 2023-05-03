@@ -58,9 +58,7 @@ while (have_posts()):
 endwhile; // End of the loop.
 ?>
     </div>
-    <!-- <div class="col-md-4"> -->
-    <?php //get_sidebar();?>
-    <!-- </div> -->
+
   </div>
 
 </main><!-- #main -->

@@ -11,14 +11,14 @@
 <article id="post-<?php the_ID();?>" <?php post_class();?>>
   <header class="entry-header">
     <?php
-if (is_singular()):
-    the_title('<h1 class="entry-title">', '</h1>');
-else:
-    the_title('<h5 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h5>');
-endif;
+      if (is_singular()):
+          the_title('<h1 class="entry-title">', '</h1>');
+      else:
+          the_title('<h5 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h5>');
+      endif;
 
-if ('post' === get_post_type()):
-?>
+      if ('post' === get_post_type()):
+      ?>
     <div class="entry-meta mb-3">
       <span class="mr-2"><?php cyberize_app_dev_posted_on();?></span>
       <span><?php cyberize_app_dev_posted_by();?></span>
@@ -27,18 +27,18 @@ if ('post' === get_post_type()):
 
      <!-- Add this code to display post categories -->
      <div class="entry-categories">
-        <?php
-$categories = get_the_category();
-$separator = ', ';
-$output = '';
+     Categories: <?php
+      $categories = get_the_category();
+      $separator = ', ';
+      $output = '';
 
-if (!empty($categories)) {
-    foreach ($categories as $category) {
-        $output .= 'Categories: <a class="text-danger" href="' . esc_url(get_category_link($category->term_id)) . '" rel="category">' . esc_html($category->name) . '</a>' . $separator;
-    }
-    echo trim($output, $separator);
-}
-?>
+      if (!empty($categories)) {
+          foreach ($categories as $category) {
+              $output .= '<a class="text-danger" href="' . esc_url(get_category_link($category->term_id)) . '" rel="category">' . esc_html($category->name) . '</a>' . $separator;
+          }
+          echo trim($output, $separator);
+      }
+      ?>
     </div>
     <!-- End of the code to display post categories -->
   </header><!-- .entry-header -->

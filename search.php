@@ -13,7 +13,7 @@ get_header();
 <main id="primary" class="site-main container">
 
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8 mx-auto">
       <?php if ( have_posts() ) : ?>
 
       <header class="page-header">
@@ -35,7 +35,8 @@ get_header();
 			 * If you want to overload this in a child theme then include a file
 			 * called content-search.php and that will be used instead.
 			 */
-			get_template_part( 'template-parts/content', 'search' );
+			get_template_part( 'template-parts/content', 'post-item' );
+			// get_template_part( 'template-parts/content', 'search' );
 
 		endwhile;
 
@@ -48,11 +49,11 @@ get_header();
 	endif;
 	?>
     </div>
-    <div class="col-md-4">
+    <!-- <div class="col-md-4">
 
       <?php get_sidebar(); ?>
 
-    </div>
+    </div> -->
   </div>
 
 

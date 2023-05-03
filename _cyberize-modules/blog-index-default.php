@@ -59,7 +59,7 @@
 
 
 											<?php
-											get_template_part( 'template-parts/content', 'post-item-ias' );	
+											get_template_part( 'template-parts/content', 'post-item' );	
 
 											?>
 										</div>
