@@ -1,58 +1,5 @@
 <?php
-/**
- * DISPLAY CUSTOM TAXONOMY BY PARENT/CHILD ORDER
- * USAGE: print_taxonomy_ranks( get_the_terms( $post->ID, 'taxonomy_slug' ) );
- */
-function print_taxonomy_ranks($terms = '')
-{
 
- // check input
- if (empty($terms) || is_wp_error($terms) || !is_array($terms)) {
-  return;
- }
-
- // set id variables to 0 for easy check
- $order_id = $family_id = $subfamily_id = 0;
-
- // get order
- foreach ($terms as $term) {
-  if ($order_id || $term->parent) {
-   continue;
-  }
-
-  $order_id = $term->term_id;
-  $order    = $term->name;
- }
-
- // get family
- foreach ($terms as $term) {
-  if ($family_id || $order_id != $term->parent) {
-   continue;
-  }
-
-  $family_id = $term->term_id;
-  $family    = $term->name;
- }
-
- // get subfamily
- foreach ($terms as $term) {
-  if ($subfamily_id || $family_id != $term->parent) {
-   continue;
-  }
-
-  $subfamily_id = $term->term_id;
-  $subfamily    = $term->name;
- }
-
- // output
- // echo "State: $order, City: $family";
- echo '
-    <p class="text-dark text-uppercase" style="font-size: .8rem; margin-bottom: 0;">
-      <small class="font-weight-bold">State:
-        <span class="text-info">' . $order . ',</span> City: <span class="text-info">' . $family . '</span>
-      </small>
-    </p>';
-}
 
 /*
  *
@@ -211,23 +158,15 @@ function get_current_template($echo = false)
 =            ACF Google Map            =
 ======================================*/
 
-function my_acf_init()
-{
+// function my_acf_init()
+// {
 
- acf_update_setting('google_api_key', 'AIzaSyCLPeaPHJFYJCR0xKMI-0aGPZpuc2aru8U');
-}
+//  acf_update_setting('google_api_key', 'AIzaSyCLPeaPHJFYJCR0xKMI-0aGPZpuc2aru8U');
+// }
 
-add_action('acf/init', 'my_acf_init');
+// add_action('acf/init', 'my_acf_init');
 
 /*=====  End of ACF Google Map  ======*/
-
-/*=====================================
-=  Remove Gravity Form Labels        =
-=====================================*/
-
-add_filter('gform_enable_field_label_visibility_settings', '__return_true');
-
-/*=====  End of Remove Gravity Form Labels  ======*/
 
 /*========================================
 =            PREPARE REST API            =
@@ -259,23 +198,23 @@ add_filter('gform_enable_field_label_visibility_settings', '__return_true');
 =            ACF OPTIONS PAGE CODE            =
 =============================================*/
 
-if (function_exists('acf_add_options_page')) {
+// if (function_exists('acf_add_options_page')) {
 
- $option_page = acf_add_options_page(array(
-  'page_title' => __('Analytics'),
-  'icon_url'   => 'dashicons-chart-line',
-  'menu_title' => 'Analytics',
-  'menu_slug'  => 'analytics-default-settings'
-  // 'capability'   => 'edit_posts',
-  // 'redirect'   => false
- ));
- $option_page = acf_add_options_page(array(
-  'page_title' => __('Theme Settings'),
-  'icon_url'   => 'dashicons-index-card',
-  'menu_title' => 'Theme Settings',
-  'menu_slug'  => 'theme-settings'
-  // 'capability'   => 'edit_posts',
-  // 'redirect'   => false
- ));
+//  $option_page = acf_add_options_page(array(
+//   'page_title' => __('Analytics'),
+//   'icon_url'   => 'dashicons-chart-line',
+//   'menu_title' => 'Analytics',
+//   'menu_slug'  => 'analytics-default-settings'
+//   // 'capability'   => 'edit_posts',
+//   // 'redirect'   => false
+//  ));
+//  $option_page = acf_add_options_page(array(
+//   'page_title' => __('Theme Settings'),
+//   'icon_url'   => 'dashicons-index-card',
+//   'menu_title' => 'Theme Settings',
+//   'menu_slug'  => 'theme-settings'
+//   // 'capability'   => 'edit_posts',
+//   // 'redirect'   => false
+//  ));
 
-}
+// }

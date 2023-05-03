@@ -102,3 +102,17 @@ require get_template_directory() . '/_functions/helpers-setup.php';
  */
 
 // require __DIR__ . '/vendor/autoload.php';
+
+/**
+ * THE FOLLOWING IS SPECIFIC TO HOUSE FOR PURCHASE AND SHOULD BE REMOVED FOR THE 
+ * FRAMEWORK 2023 CODE
+ */
+
+function exclude_category_1_from_blog_page( $query ) {
+    // Check if this is the main query and if we're on the blog page
+    if ( $query->is_home() && $query->is_main_query() ) {
+        // Exclude posts with category ID 10 (Agents)
+        $query->set( 'cat', '-10' );
+    }
+}
+add_action( 'pre_get_posts', 'exclude_category_1_from_blog_page' );

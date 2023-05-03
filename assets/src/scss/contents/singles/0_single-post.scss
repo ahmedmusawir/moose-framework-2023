@@ -11,11 +11,12 @@
     padding-bottom: 5rem;
 
     .entry-content {
+      // border: 1rem dotted red;
       padding: 3rem;
-      //   background: $cg-secondary;
+      background: $cg-secondary;
 
       p {
-        // color: white;
+        color: white;
         line-height: 2rem;
       }
     }

@@ -51,9 +51,12 @@
       <div class="agent-list-container">
 
         <?php
-         $args = array(
-          'post_type' => 'post'
-         );
+        
+        $args = array(
+          'post_type'      => 'post',
+          'category_name'  => 'Agents',
+          'cat'            => 10,
+        );
 
          $query = new WP_Query($args);
 
@@ -91,6 +94,9 @@
           echo 'No Post Found ...';
 
          }
+
+         // Reset the post data to restore the global $post variable to the current post in the main query
+        wp_reset_postdata();
 
         ?>
 

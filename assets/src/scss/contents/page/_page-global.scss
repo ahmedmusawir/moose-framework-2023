@@ -8,6 +8,12 @@
   // border: 4px dotted blue;
   padding-bottom: 2rem;
 
+  @media screen and (min-width: 1200px) and (max-width: 1600px) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    // border: 3px dotted dodgerblue;
+  }
+
   .type-page {
     // border: 3px dotted green;
     padding-top: 8rem;

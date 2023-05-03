@@ -1,19 +1,19 @@
 /*=============================
 =            GLOBALS            =
 =============================*/
-@import 'wp_default';
-@import 'global';
-@import 'custom';
+@import "wp_default";
+@import "global";
+@import "custom";
 // @import "contents/sidebar/sidebar-global";
 
 /*=======================================
 =    HEADER & FOOTER & SIDEBAR            =
 =======================================*/
 
-@import 'headers/header-house-for-purchase';
-@import 'headers/header-general';
-@import 'footers/footer-house-for-purchase';
-@import 'footers/footer-general';
+@import "headers/header-house-for-purchase";
+@import "headers/header-general";
+@import "footers/footer-house-for-purchase";
+@import "footers/footer-general";
 
 /*=====  End of HEADER & FOOTER  ======*/
 
@@ -30,13 +30,13 @@
 ========================================*/
 
 // @import "contents/page/page-dashboard";
-@import 'contents/page/page-global';
-@import 'contents/page/page-selflist';
-@import 'contents/page/page-selflist-listings-index';
-@import 'contents/page/page-selflist-list-insert';
-@import 'contents/page/page-selflist-customer-profile';
-@import 'contents/page/page-category-search';
-@import 'contents/page/page-team';
+@import "contents/page/page-global";
+@import "contents/page/page-selflist";
+@import "contents/page/page-selflist-listings-index";
+@import "contents/page/page-selflist-list-insert";
+@import "contents/page/page-selflist-customer-profile";
+@import "contents/page/page-category-search";
+@import "contents/page/page-team";
 
 /*=====  End of PAGE GENERAL  ======*/
 
@@ -44,10 +44,11 @@
 =            BLOG INDEX PAGE            =
 =======================================*/
 
-@import 'contents/index-pages/blog-index';
-@import 'contents/index-pages/archive-index';
-@import 'contents/index-pages/search-index';
-@import 'contents/index-pages/category-index';
+// @import "contents/index-pages/blog-index";
+@import "contents/index-pages/archive-index";
+@import "contents/index-pages/search-index";
+@import "contents/index-pages/category-index";
+@import "contents/index-pages/blog-index-default";
 
 /*=====  End of BLOG INDEX PAGE  ======*/
 
@@ -55,7 +56,8 @@
 =            SINGLE BLOG POST            =
 ========================================*/
 
-@import 'contents/singles/single-post';
+@import "contents/singles/single-post";
+@import "contents/singles/single-agents";
 
 /*=====  End of SINGLE BLOG POST  ======*/
 
@@ -63,7 +65,7 @@
 =            COMMENTS			          =
 ========================================*/
 
-@import 'contents/comments/comments-asm';
+@import "contents/comments/comments-asm";
 
 /*=====  End of SINGLE BLOG POST  ======*/
 
@@ -87,7 +89,7 @@
 =            SIDEBAR STYLES 	            =
 ==========================================*/
 
-@import 'contents/sidebar/sidebar-global';
+@import "contents/sidebar/sidebar-global";
 
 /*=====  End of SIDEBAR PAGE  ======*/
 
@@ -105,7 +107,7 @@
 
 // @import "project_globals/asm-globals";
 // @import 'project_globals/selflist-gravity';
-@import 'project_globals/house-for-purchase';
+@import "project_globals/house-for-purchase";
 
 /*=====  End of PROJECT GLOBALS ======*/
 
@@ -137,7 +139,7 @@
 =            WOOCOMMERCE STYLES            =
 =======================================*/
 
-@import 'woocom/woocom-global';
+@import "woocom/woocom-global";
 // @import "woocom/woocom-livewell";
 
 /*=====  End of WOOCOMMERCE STYLES  ======*/
